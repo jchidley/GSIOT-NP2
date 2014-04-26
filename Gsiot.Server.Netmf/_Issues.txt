@@ -1,0 +1,23 @@
+﻿URGENT
+
+BUGS
+
+QUESTIONS
+ - HttpReader: provide more explicit configuration mechanism for symbolBufferCapacity?
+ - HttpWriter: is maxWriteBufferSize == 1024 a good choice?
+ - HttpServer.Run: implement exponential backoff upon DNS lookup failure?
+ - SocketStream.Read: exception handling for timeouts, remote host connection closes?
+
+TODO
+ - update documentation
+ - do more tests with multithreaded mode and connections that are kept open between requests
+ - make HTTP processing more robust: http://programmingisterrible.com/post/50237666844/http-as-imagined-versus-http-as-found
+ 
+CHANGES V4.3 beta 1
+ - support for arbitrary binary content, not only text content
+ - lazy creation of ResponseContent with its decoding of UTF8
+ - plug-in mechanism for streams that are not socket-based
+ - multithreaded mode
+ - public RoutingElement and support for removing such an element again
+ - test for default Mountaineer MAC address, to detect unconfigured devices
+   (which may lead to multiple devices with the same MAC address)
